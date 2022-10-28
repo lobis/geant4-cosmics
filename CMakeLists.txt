@@ -16,9 +16,6 @@ add_executable(
 )
 
 file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
-target_include_directories(${EXECUTABLE_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(${EXECUTABLE_NAME} PUBLIC ${ROOT_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/include)
 target_sources(${EXECUTABLE_NAME} PRIVATE ${SOURCES})
 target_link_libraries(${EXECUTABLE_NAME} ${Geant4_LIBRARIES} ${ROOT_LIBRARIES})
-
-
-
